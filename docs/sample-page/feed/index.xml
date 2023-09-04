@@ -8,10 +8,10 @@
 <channel>
 	<title>
 	Comments on: Gítartímar	</title>
-	<atom:link href="http://host.docker.internal/sample-page/feed/?simply_static_page=6152" rel="self" type="application/rss+xml" />
+	<atom:link href="http://host.docker.internal/sample-page/feed/?simply_static_page=6184" rel="self" type="application/rss+xml" />
 	<link>/</link>
-	<description>Take a sad song and make it better</description>
-	<lastBuildDate>Mon, 04 Sep 2023 19:47:17 +0000</lastBuildDate>
+	<description></description>
+	<lastBuildDate>Mon, 04 Sep 2023 20:43:10 +0000</lastBuildDate>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
 	<sy:updateFrequency>
