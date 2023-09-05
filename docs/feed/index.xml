@@ -9,10 +9,10 @@
 
 <channel>
 	<title></title>
-	<atom:link href="http://host.docker.internal/feed/?simply_static_page=322" rel="self" type="application/rss+xml" />
+	<atom:link href="http://host.docker.internal/feed/?simply_static_page=352" rel="self" type="application/rss+xml" />
 	<link>/</link>
 	<description></description>
-	<lastBuildDate>Tue, 05 Sep 2023 16:38:16 +0000</lastBuildDate>
+	<lastBuildDate>Tue, 05 Sep 2023 17:28:34 +0000</lastBuildDate>
 	<language>en-US</language>
 	<sy:updatePeriod>
 	hourly	</sy:updatePeriod>
