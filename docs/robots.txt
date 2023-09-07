@@ -1,1 +1,5 @@
 User-agent: *
+Allow: /
+Disallow: /wp-content/
+Disallow: /wp-includes/
+Disallow: /wp-json/
