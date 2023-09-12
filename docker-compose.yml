@@ -7,7 +7,7 @@ services:
     - 3000:3000
     working_dir: /app
     volumes:
-      - ./src:/app
+      - ./React:/app
 
   db:
     image: mariadb:10.6.4-focal
