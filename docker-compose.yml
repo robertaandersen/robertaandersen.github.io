@@ -1,4 +1,14 @@
 services:
+  nginx:
+    image: nginx:latest
+    tty: true
+    stdin_open: true
+    ports:
+    - 8080:80
+    working_dir: /app
+    volumes:
+      - ./React/build:/app
+
   node:
     image: node:latest
     tty: true
