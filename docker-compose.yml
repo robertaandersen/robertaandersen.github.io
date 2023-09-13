@@ -1,15 +1,4 @@
 services:
-  nginx:
-    image: nginx:latest
-    tty: true
-    stdin_open: true
-    ports:
-    - 8080:80
-    working_dir: /app
-    volumes:
-      - ./React/build:/usr/share/nginx/html/
-      - ./React/public/default.conf:/etc/nginx/conf.d/default.conf
-
   node:
     image: node:latest
     tty: true
