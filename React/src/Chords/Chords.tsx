@@ -21,34 +21,36 @@ const ChordPageStyle = styled(MainContainerContentStyle)`
 
 const Chords = () => {
     return (
-        <MainContainerStyle>
-            <title>Gítargrip</title>
-            <MainContainerContentStyle>
-                <h1>Nokkur Gítargrip</h1>
-                <h3>Dúr hljómar</h3>
-                <ChordPageStyle>
-                    <ChordContainer {...{ chordDiagram: Emajor, chordName: 'E' }} />
-                    <ChordContainer {...{ chordDiagram: Amajor, chordName: 'A' }} />
-                    <ChordContainer {...{ chordDiagram: Dmajor, chordName: 'D' }} />
-                    <ChordContainer {...{ chordDiagram: Gmajor, chordName: 'G' }} />
-                    <ChordContainer {...{ chordDiagram: Cmajor, chordName: 'C' }} />
-                </ChordPageStyle>
+      <MainContainerStyle>
+        <title>Gítargrip</title>
+        <MainContainerContentStyle>
+          <h1>Nokkur Gítargrip</h1>
+          <h3>Dúr hljómar</h3>
+          <ChordPageStyle>
+            <ChordContainer {...{ chordDiagram: Emajor, chordName: "E" }} />
+            <ChordContainer {...{ chordDiagram: Amajor, chordName: "A" }} />
+            <ChordContainer {...{ chordDiagram: Dmajor, chordName: "D" }} />
+            <ChordContainer {...{ chordDiagram: Gmajor, chordName: "G" }} />
+            <ChordContainer {...{ chordDiagram: Cmajor, chordName: "C" }} />
+          </ChordPageStyle>
 
-                <h3>Moll hljómar</h3>
-                <ChordPageStyle>
-                    <ChordContainer {...{ chordDiagram: Eminor, chordName: 'Em' }} />
-                    <ChordContainer {...{ chordDiagram: Aminor, chordName: 'Am' }} />
-                </ChordPageStyle>
+          <h3>Moll hljómar</h3>
+          <ChordPageStyle>
+            <ChordContainer {...{ chordDiagram: Eminor, chordName: "Em" }} />
+            <ChordContainer {...{ chordDiagram: Aminor, chordName: "Am" }} />
+          </ChordPageStyle>
 
-                <h3>7-undar hljómar</h3>
-                <ChordPageStyle>
-                    <ChordContainer {...{ chordDiagram: Emajor7, chordName: 'E7' }} />
-                    <ChordContainer {...{ chordDiagram: Amajor7, chordName: 'A7' }} />
-                </ChordPageStyle>
-
-
-            </MainContainerContentStyle>
-        </MainContainerStyle>
+          <h3>7-undar hljómar</h3>
+          <ChordPageStyle>
+            <ChordContainer {...{ chordDiagram: Emajor7, chordName: "E7" }} />
+            <ChordContainer {...{ chordDiagram: Amajor7, chordName: "A7" }} />
+          </ChordPageStyle>
+          <h3>test</h3>
+          <ChordPageStyle>
+            <ChordContainer {...{ chordDiagram: Emajor7, chordName: "E7" }} />
+          </ChordPageStyle>
+        </MainContainerContentStyle>
+      </MainContainerStyle>
     );
 }
 
