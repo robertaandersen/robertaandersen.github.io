@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg
+  viewBox="0 0 83 100"
+  xmlns="http://www.w3.org/2000/svg">
+
+   <!--
+    E -> x1="10.0"
+    A -> x1="22.5"
+    D -> x1="35.0"
+    G -> x1="47.5"
+    B -> x1="60.0"
+    E -> x1="72.5"
+
+    1st -> cy="20"
+    2nd -> cy="40"
+    3rd ->
+    4th ->
+  -->
+  <circle cx="10" cy="5" r="2.5" stroke="black" stroke-width="1" fill="rgb(256,256,256,125)" />
+  <circle cx="35" cy="5" r="2.5" stroke="black" stroke-width="1" fill="rgb(256,256,256,125)" />
+  <circle cx="60" cy="5" r="2.5" stroke="black" stroke-width="1" fill="rgb(256,256,256,125)" />
+  <circle cx="72.5" cy="5" r="2.5" stroke="black" stroke-width="1" fill="rgb(256,256,256,125)" />
+
+  <circle cx="22.5" cy="40" r="5" stroke="black" stroke-width="1" fill="rgb(256,256,256,125)" />
+  <text x="21" y="42.5" font-size="0.5em" >2</text>
+
+  <circle cx="47.5" cy="20" r="5" stroke="black" stroke-width="1" fill="rgb(256,256,256,125)" />
+  <text x="45.5" y="22.5" font-size="0.5em" >1</text>
+
+</svg>
