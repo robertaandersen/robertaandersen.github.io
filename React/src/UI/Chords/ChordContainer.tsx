@@ -5,7 +5,7 @@ import { ReactSVG } from "react-svg";
 
 const ChordContainerStyle = styled.div`
   width: fit-content;
-  width: 200px;
+  min-width: 180px;
 `;
 
 const ChordGridStyle = styled.div`
