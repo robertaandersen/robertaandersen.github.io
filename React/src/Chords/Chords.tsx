@@ -45,10 +45,6 @@ const Chords = () => {
             <ChordContainer {...{ chordDiagram: Emajor7, chordName: "E7" }} />
             <ChordContainer {...{ chordDiagram: Amajor7, chordName: "A7" }} />
           </ChordPageStyle>
-          <h3>test</h3>
-          <ChordPageStyle>
-            <ChordContainer {...{ chordDiagram: Emajor7, chordName: "E7" }} />
-          </ChordPageStyle>
         </MainContainerContentStyle>
       </MainContainerStyle>
     );
