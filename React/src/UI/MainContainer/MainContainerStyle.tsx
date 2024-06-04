@@ -6,10 +6,15 @@ export const MainContainerStyle = styled.div`
     `
 
 export const MainContainerContentStyle = styled.div`
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 700px;
-`
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+
+  @media (max-width: 480px) {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+`;
 
 
 export const ImageParagraph = styled(MainContainerStyle)`

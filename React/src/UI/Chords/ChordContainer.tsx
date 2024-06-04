@@ -6,6 +6,9 @@ import { ReactSVG } from "react-svg";
 const ChordContainerStyle = styled.div`
   width: fit-content;
   min-width: 180px;
+  @media (max-width: 480px) {
+    min-width: 120px;
+  }
 `;
 
 const ChordGridStyle = styled.div`
