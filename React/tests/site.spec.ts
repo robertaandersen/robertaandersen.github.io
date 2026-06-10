@@ -20,17 +20,17 @@ test.describe('Guitar Lessons Site', () => {
   test('navigation shows all menu items', async ({ page }) => {
     const navItems = ['Velkomin', 'Bóka Tíma', 'Uppbygging Námsins', 'Verð', 'Um Mig', 'Gítargrip'];
     for (const item of navItems) {
-      await expect(page.locator(`a`, { hasText: item })).toBeAttached();
+      await expect(page.locator(`button`, { hasText: item })).toBeAttached();
     }
   });
 
   test('navigate to Bóka Tíma', async ({ page }) => {
-    await page.click('a:has-text("Bóka Tíma")');
+    await page.click('button:has-text("Bóka Tíma")');
     await expect(page.locator('h1', { hasText: 'Bóka Tíma' })).toBeVisible();
   });
 
   test('navigate to Uppbygging Námsins', async ({ page }) => {
-    await page.click('a:has-text("Uppbygging Námsins")');
+    await page.click('button:has-text("Uppbygging Námsins")');
     await expect(page.locator('h1', { hasText: 'Uppbygging námsins' })).toBeVisible();
     await expect(page.locator('h3', { hasText: 'Byrjendur' })).toBeVisible();
     await expect(page.locator('h3', { hasText: 'Miðstig' })).toBeVisible();
@@ -38,20 +38,20 @@ test.describe('Guitar Lessons Site', () => {
   });
 
   test('navigate to Verð (Catalog)', async ({ page }) => {
-    await page.click('a:has-text("Verð")');
+    await page.click('button:has-text("Verð")');
     await expect(page.locator('h1', { hasText: 'Verðskrá' })).toBeVisible();
     await expect(page.locator('text=60.000 kr')).toBeVisible();
     await expect(page.locator('text=6000 kr')).toBeVisible();
   });
 
   test('navigate to Um Mig', async ({ page }) => {
-    await page.click('a:has-text("Um Mig")');
+    await page.click('button:has-text("Um Mig")');
     await expect(page.locator('h1', { hasText: 'Um Mig' })).toBeVisible();
     await expect(page.locator('img[alt="roberta"]')).toBeVisible();
   });
 
   test('navigate to Gítargrip (Chords)', async ({ page }) => {
-    await page.click('a:has-text("Gítargrip")');
+    await page.click('button:has-text("Gítargrip")');
     await expect(page.locator('h1', { hasText: 'Nokkur Gítargrip' })).toBeVisible();
     await expect(page.locator('h3', { hasText: 'Dúr hljómar' })).toBeVisible();
     await expect(page.locator('h3', { hasText: 'Moll hljómar' })).toBeVisible();
@@ -59,7 +59,7 @@ test.describe('Guitar Lessons Site', () => {
   });
 
   test('chord diagrams display chord names', async ({ page }) => {
-    await page.click('a:has-text("Gítargrip")');
+    await page.click('button:has-text("Gítargrip")');
     const chordNames = ['E', 'A', 'D', 'G', 'C', 'Em', 'Am', 'E7', 'A7'];
     for (const chord of chordNames) {
       await expect(page.locator('h4', { hasText: new RegExp(`^${chord}$`) })).toBeVisible();
@@ -67,9 +67,9 @@ test.describe('Guitar Lessons Site', () => {
   });
 
   test('can navigate back to landing from another page', async ({ page }) => {
-    await page.click('a:has-text("Um Mig")');
+    await page.click('button:has-text("Um Mig")');
     await expect(page.locator('h1', { hasText: 'Um Mig' })).toBeVisible();
-    await page.click('a:has-text("Velkomin")');
+    await page.click('button:has-text("Velkomin")');
     await expect(page.locator('h1', { hasText: 'Velkomin' })).toBeVisible();
   });
 });

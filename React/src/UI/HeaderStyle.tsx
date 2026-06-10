@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import portrait from '../images/banner.jpg'
+import portrait from '../images/banner.webp'
 
 const HeaderStyle = styled.div `
     img {
@@ -10,7 +10,7 @@ const HeaderStyle = styled.div `
 const Header = () => {
     return (
         <HeaderStyle>
-            <img src={portrait} />
+            <img src={portrait} alt="Gítarkennsla Robertu Andersen" />
         </HeaderStyle>
     )
 }

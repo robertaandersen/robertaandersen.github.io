@@ -34,8 +34,8 @@ const Navigation = () => {
         <NavigationStyle>
           <ul>
             {pages.map(({ key, title }) => (
-              <li key={key} onClick={() => setActivePage(key)}>
-                <a href='#'>{title}</a>
+              <li key={key}>
+                <button onClick={() => setActivePage(key)}>{title}</button>
               </li>
             ))}
           </ul>

@@ -18,20 +18,20 @@ export  const NavigationMenuStyle = styled.div `
         margin: 0 1rem;
     }
 
-    li a {
+    li button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font: inherit;
         text-decoration: none;
         display: block;
         color: black;
         width: 100%;
+        padding: 0;
     }
 
-    li a:hover {
+    li button:hover {
         text-decoration-line: underline;
-    }
-
-    li a:visited{
-
-        text-decoration: none;
     }
 
     @media screen and (max-width: 768px) {
@@ -49,7 +49,7 @@ export  const NavigationMenuStyle = styled.div `
             width: 100;
         }
 
-        li a {
+        li button {
             color: black;
             width: 100%;
             padding: 1.5rem 0;

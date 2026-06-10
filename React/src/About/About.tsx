@@ -1,5 +1,5 @@
 import { ImageParagraph, MainContainerContentStyle, MainContainerStyle } from '../UI/MainContainer/MainContainerStyle';
-import portrait from '../images/roberta.jpeg'
+import portrait from '../images/roberta.webp'
 
 console.log(portrait);
 const About = () => {

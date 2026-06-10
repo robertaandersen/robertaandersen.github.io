@@ -1,7 +1,6 @@
 
 import styled from "styled-components";
-import BaseGrid from './BaseGrid.svg'
-import { ReactSVG } from "react-svg";
+import { ReactComponent as BaseGrid } from './BaseGrid.svg';
 
 const ChordContainerStyle = styled.div`
   width: fit-content;
@@ -22,10 +21,10 @@ const ChordDiagramStyle = styled(ChordGridStyle)`
 `;
 
 export const ChordContainer = ({
-  chordDiagram,
+  ChordDiagram,
   chordName,
 }: {
-  chordDiagram: string;
+  ChordDiagram: React.FC<React.SVGProps<SVGSVGElement>>;
   chordName: string;
 }) => {
   return (
@@ -34,10 +33,10 @@ export const ChordContainer = ({
         <hr />
         <h4>{chordName}</h4>
         <ChordGridStyle>
-          <ReactSVG src={BaseGrid} />
+          <BaseGrid />
         </ChordGridStyle>
         <ChordDiagramStyle>
-          <ReactSVG src={chordDiagram} />
+          <ChordDiagram />
         </ChordDiagramStyle>
       </center>
     </ChordContainerStyle>
