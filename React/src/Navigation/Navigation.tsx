@@ -7,7 +7,7 @@ import Landing from '../Landing/Landing';
 import Courses from '../Courses/Courses';
 import Catalog from '../Catalog/Catalog';
 import About from '../About/About';
-import Chords from '../Chords/Chords';
+import Materials from '../Materials/Materials';
 import Book from '../Book/Book';
 import { useTranslation } from '../i18n/LanguageContext';
 
@@ -17,11 +17,11 @@ const pageComponents: Record<string, JSX.Element> = {
   Courses: <Courses />,
   Catalog: <Catalog />,
   About: <About />,
-  Chords: <Chords />,
+  Materials: <Materials />,
 };
 
-const pageKeys = ['Landing', 'Book', 'Courses', 'Catalog', 'About', 'Chords'] as const;
-type NavKey = 'landing' | 'book' | 'courses' | 'catalog' | 'about' | 'chords';
+const pageKeys = ['Landing', 'Book', 'Courses', 'Catalog', 'About', 'Materials'] as const;
+type NavKey = 'landing' | 'book' | 'courses' | 'catalog' | 'about' | 'materials';
 
 const Navigation = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);

@@ -18,7 +18,7 @@ test.describe('Guitar Lessons Site', () => {
   });
 
   test('navigation shows all menu items', async ({ page }) => {
-    const navItems = ['Velkomin', 'Bóka Tíma', 'Uppbygging Námsins', 'Verð', 'Um Mig', 'Gítargrip'];
+    const navItems = ['Velkomin', 'Bóka Tíma', 'Uppbygging Námsins', 'Verð', 'Um Mig', 'Námsefni'];
     for (const item of navItems) {
       await expect(page.locator(`button`, { hasText: item })).toBeAttached();
     }
@@ -50,8 +50,8 @@ test.describe('Guitar Lessons Site', () => {
     await expect(page.locator('img[alt="roberta"]')).toBeVisible();
   });
 
-  test('navigate to Gítargrip (Chords)', async ({ page }) => {
-    await page.click('button:has-text("Gítargrip")');
+  test('navigate to Námsefni - Chords tab', async ({ page }) => {
+    await page.click('button:has-text("Námsefni")');
     await expect(page.locator('h1', { hasText: 'Nokkur Gítargrip' })).toBeVisible();
     await expect(page.locator('h3', { hasText: 'Dúr hljómar' })).toBeVisible();
     await expect(page.locator('h3', { hasText: 'Moll hljómar' })).toBeVisible();
@@ -59,11 +59,33 @@ test.describe('Guitar Lessons Site', () => {
   });
 
   test('chord diagrams display chord names', async ({ page }) => {
-    await page.click('button:has-text("Gítargrip")');
+    await page.click('button:has-text("Námsefni")');
     const chordNames = ['E', 'A', 'D', 'G', 'C', 'Em', 'Am', 'E7', 'A7'];
     for (const chord of chordNames) {
       await expect(page.locator('h4', { hasText: new RegExp(`^${chord}$`) })).toBeVisible();
     }
+  });
+
+  test('navigate to Námsefni - Heimahljómar tab', async ({ page }) => {
+    await page.click('button:has-text("Námsefni")');
+    await page.click('button:has-text("Heimahljómar")');
+    await expect(page.locator('h1', { hasText: 'Heimahljómar' })).toBeVisible();
+    await expect(page.locator('h3', { hasText: 'Uppbygging' })).toBeVisible();
+    await expect(page.locator('h3', { hasText: 'Formúlan' })).toBeVisible();
+  });
+
+  test('Heimahljómar chord diagrams render SVGs', async ({ page }) => {
+    await page.click('button:has-text("Námsefni")');
+    await page.click('button:has-text("Heimahljómar")');
+    // Check that movable chord containers render with expected chord names
+    await expect(page.locator('h4', { hasText: 'Maj7' }).first()).toBeVisible();
+    await expect(page.locator('h4', { hasText: /^7$/ }).first()).toBeVisible();
+    await expect(page.locator('h4', { hasText: /^m7$/ }).first()).toBeVisible();
+    await expect(page.getByText('m7♭5').first()).toBeVisible();
+    // Verify chord diagrams rendered (8 shapes = 8 h4 labels)
+    const chordLabels = page.locator('h4');
+    const count = await chordLabels.count();
+    expect(count).toBeGreaterThanOrEqual(8);
   });
 
   test('can navigate back to landing from another page', async ({ page }) => {

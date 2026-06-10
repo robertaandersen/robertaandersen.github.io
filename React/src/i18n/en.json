@@ -5,7 +5,7 @@
     "courses": "Curriculum",
     "catalog": "Pricing",
     "about": "About Me",
-    "chords": "Guitar Chords"
+    "materials": "Materials"
   },
   "landing": {
     "title": "Guitar Lessons",
@@ -73,5 +73,31 @@
     "major_chords": "Major Chords",
     "minor_chords": "Minor Chords",
     "seventh_chords": "Seventh Chords"
+  },
+  "materials": {
+    "title": "Materials",
+    "tabs": {
+      "chords": "Chords",
+      "heimahljomar": "Diatonic Chords"
+    }
+  },
+  "theory": {
+    "heimahljomar": {
+      "heading": "Diatonic Chords",
+      "intro": "A large part of Western music, whether Bach or Elvis, is built on the major and minor system. All chords in use come from the major/minor scale.",
+      "triad_explanation": "Triads have three notes: root, third, and fifth. Seventh chords add the 7th.",
+      "building_heading": "Construction",
+      "building_example": "For example, C major contains these notes:",
+      "pick_every_other": "From each note you can build a chord by picking every other note:",
+      "pattern_heading": "Chord Type Pattern",
+      "chord_types_intro": "Among the 7 diatonic chords you'll find 4 types:",
+      "type_label": "Type",
+      "degrees_label": "Degrees",
+      "formula_heading": "The Formula",
+      "examples_heading": "Examples",
+      "chords_heading": "Chord Shapes",
+      "chords_e_root": "Chords with root on 6th string (E shape):",
+      "chords_a_root": "Chords with root on 5th string (A shape):"
+    }
   }
 }

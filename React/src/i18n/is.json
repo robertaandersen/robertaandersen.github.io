@@ -5,7 +5,7 @@
     "courses": "Uppbygging Námsins",
     "catalog": "Verð",
     "about": "Um Mig",
-    "chords": "Gítargrip"
+    "materials": "Námsefni"
   },
   "landing": {
     "title": "Gítartímar",
@@ -73,5 +73,31 @@
     "major_chords": "Dúr hljómar",
     "minor_chords": "Moll hljómar",
     "seventh_chords": "7-undar hljómar"
+  },
+  "materials": {
+    "title": "Námsefni",
+    "tabs": {
+      "chords": "Gítargrip",
+      "heimahljomar": "Heimahljómar"
+    }
+  },
+  "theory": {
+    "heimahljomar": {
+      "heading": "Heimahljómar",
+      "intro": "Stór hluti vestrænnar tónlistar hvort sem það er Bach eða Elvis byggist upp á dúr og moll kerfinu. Allir hljómar sem eru í notkun koma úr dúr/moll skalanum.",
+      "triad_explanation": "Þríhljómar hafa þrjár nótur: Grunntón, þríund og fimmund. Við ferhljómana bætist við 7und.",
+      "building_heading": "Uppbygging",
+      "building_example": "Td. C-dúr sem inniheldur þessar nótur:",
+      "pick_every_other": "Uppfrá hverri nótu má byggja upp hljóm með því að velja aðra hverja nótu:",
+      "pattern_heading": "Mynstur hljómagerða",
+      "chord_types_intro": "Í heimahljómunum 7 má finna 4 gerðir hljóma:",
+      "type_label": "Gerð",
+      "degrees_label": "Sæti",
+      "formula_heading": "Formúlan",
+      "examples_heading": "Dæmi",
+      "chords_heading": "Gripmynstur",
+      "chords_e_root": "Grip með rót á 6. streng (E-mynstur):",
+      "chords_a_root": "Grip með rót á 5. streng (A-mynstur):"
+    }
   }
 }
