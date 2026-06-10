@@ -1,4 +1,3 @@
-
 import { MainContainerContentStyle, MainContainerStyle } from '../UI/MainContainer/MainContainerStyle';
 import { ReactComponent as Emajor } from '../UI/Chords/EMajor.svg'
 import { ReactComponent as Amajor } from '../UI/Chords/AMajor.svg'
@@ -11,6 +10,7 @@ import { ReactComponent as Emajor7 } from '../UI/Chords/EMajor7.svg'
 import { ReactComponent as Amajor7 } from '../UI/Chords/AMajor7.svg'
 import styled from 'styled-components';
 import { ChordContainer } from '../UI/Chords/ChordContainer';
+import { useTranslation } from '../i18n/LanguageContext';
 
 
 const ChordPageStyle = styled(MainContainerContentStyle)`
@@ -20,12 +20,13 @@ const ChordPageStyle = styled(MainContainerContentStyle)`
 `
 
 const Chords = () => {
+    const { t } = useTranslation();
     return (
       <MainContainerStyle>
-        <title>Gítargrip</title>
+        <title>{t.chords.title}</title>
         <MainContainerContentStyle>
-          <h1>Nokkur Gítargrip</h1>
-          <h3>Dúr hljómar</h3>
+          <h1>{t.chords.heading}</h1>
+          <h3>{t.chords.major_chords}</h3>
           <ChordPageStyle>
             <ChordContainer {...{ ChordDiagram: Emajor, chordName: "E" }} />
             <ChordContainer {...{ ChordDiagram: Amajor, chordName: "A" }} />
@@ -34,13 +35,13 @@ const Chords = () => {
             <ChordContainer {...{ ChordDiagram: Cmajor, chordName: "C" }} />
           </ChordPageStyle>
 
-          <h3>Moll hljómar</h3>
+          <h3>{t.chords.minor_chords}</h3>
           <ChordPageStyle>
             <ChordContainer {...{ ChordDiagram: Eminor, chordName: "Em" }} />
             <ChordContainer {...{ ChordDiagram: Aminor, chordName: "Am" }} />
           </ChordPageStyle>
 
-          <h3>7-undar hljómar</h3>
+          <h3>{t.chords.seventh_chords}</h3>
           <ChordPageStyle>
             <ChordContainer {...{ ChordDiagram: Emajor7, chordName: "E7" }} />
             <ChordContainer {...{ ChordDiagram: Amajor7, chordName: "A7" }} />

@@ -5,6 +5,27 @@ export const NavigationContainerStyle = styled.div `
     flex-direction: column;
     background-color: #fff;
     color: black;
+    position: relative;
+`
+export const LanguageToggleStyle = styled.div`
+    position: absolute;
+    top: 8px;
+    right: 12px;
+
+    button {
+        background: none;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 4px 10px;
+        cursor: pointer;
+        font: inherit;
+        font-size: 0.85rem;
+        font-weight: bold;
+    }
+
+    button:hover {
+        background-color: #eee;
+    }
 `
 export  const NavigationMenuStyle = styled.div `
     align-self: center;

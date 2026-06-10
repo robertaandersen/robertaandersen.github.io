@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "landing": "Welcome",
+    "book": "Book a Lesson",
+    "courses": "Curriculum",
+    "catalog": "Pricing",
+    "about": "About Me",
+    "chords": "Guitar Chords"
+  },
+  "landing": {
+    "title": "Guitar Lessons",
+    "heading": "Welcome",
+    "intro": "With me you'll get personal guidance in guitar playing from an experienced and dedicated teacher. The curriculum is tailored to each student's interests and skill level, at a pace that suits you. You can book individual lessons, but a multi-week course is recommended to maximize progress and enjoyment!",
+    "electric_or_acoustic": "Lessons are available on both electric and acoustic guitar - depending on your preference.",
+    "everyone_welcome": "Beginners, advanced players, children and adults - everyone is welcome",
+    "contact_prompt": "If you have any questions or want to book a lesson, get in touch!",
+    "email_label": "Email",
+    "phone_label": "Phone"
+  },
+  "book": {
+    "title": "Book a Lesson",
+    "heading": "Book a Lesson",
+    "description": "Feel free to give me a call or send an email and I'll get back to you shortly.",
+    "email_label": "Email",
+    "phone_label": "Phone"
+  },
+  "courses": {
+    "title": "Curriculum",
+    "heading": "Curriculum",
+    "intro": "The curriculum is designed as individualized learning where each student's interests, abilities, and available time guide the journey. Broadly, lessons can be divided into beginner, intermediate, and advanced levels. How long each level takes varies greatly and it's common for students to feel they progress at different rates.",
+    "beginner_heading": "Beginners",
+    "beginner_description": "The beginner course is for those who want to start learning guitar with little to no experience. We'll cover fundamentals such as posture, how to hold the instrument, strumming, simple chords, etc.",
+    "beginner_goal": "To feel comfortable with the instrument and be able to play a simple song with chords.",
+    "beginner_age": "The course is tailored to each student's needs and abilities. Everyone welcome!",
+    "intermediate_heading": "Intermediate",
+    "intermediate_description": "For those who have a good grasp of the basics and want to take it further! We'll cover barre chords, chord progressions, and connect them to music theory fundamentals (based on interest!).",
+    "intermediate_scales": "Common scales such as pentatonic, major and minor scales, and how to use them for improvisation.",
+    "intermediate_goal": "To be able to play simple solos independently over common chord progressions.",
+    "intermediate_age": "Open to all!",
+    "advanced_heading": "Advanced",
+    "advanced_description": "For advanced players who have mastered all fundamental concepts such as open chords, barre chords, and basic scales, but want to dive deeper!",
+    "advanced_details": "We'll explore seventh chords, modes, and practical foundations of jazz and pop music theory and how they apply to guitar playing.",
+    "advanced_suits": "Especially suitable for those preparing for entrance exams to music schools.",
+    "advanced_goal": "To be able to play more complex progressions involving seventh chords and key changes, connect them to appropriate scales, and use them to improvise simple melodic lines over chord progressions.",
+    "advanced_age": "Everyone welcome!",
+    "goal_label": "Goal:",
+    "age_label": "Age:"
+  },
+  "catalog": {
+    "title": "Pricing",
+    "heading": "Pricing",
+    "all_private": "All lessons are private and all materials are included.",
+    "course_12_weeks": "Course 12 weeks (12 × 30 min)",
+    "price_label": "Price",
+    "price_12_weeks": "60,000 ISK",
+    "single_30_min": "Single lesson (30 min)",
+    "price_30_min": "6,000 ISK",
+    "single_60_min": "Single lesson (1 hour)",
+    "price_60_min": "11,000 ISK"
+  },
+  "about": {
+    "title": "About Me",
+    "heading": "About Me",
+    "bio_1": "My name is Róberta Andersen and I've been teaching guitar since 2000. I graduated from the FÍH Music School in 2003 and also studied instrument performance at the Royal College of Music in Stockholm.",
+    "bio_2": "I've worked with various musicians over the years, including Múm, Bogomil Font, Benna Hemm Hemm, and",
+    "bio_2_link_text": "Hist Og",
+    "bio_2_suffix": "to name a few.",
+    "bio_3": "I also work as a software developer in addition to teaching and playing guitar!"
+  },
+  "chords": {
+    "title": "Guitar Chords",
+    "heading": "Some Guitar Chords",
+    "major_chords": "Major Chords",
+    "minor_chords": "Minor Chords",
+    "seventh_chords": "Seventh Chords"
+  }
+}

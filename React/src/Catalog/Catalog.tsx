@@ -1,18 +1,20 @@
 import { MainContainerContentStyle, MainContainerStyle } from "../UI/MainContainer/MainContainerStyle";
+import { useTranslation } from "../i18n/LanguageContext";
 
 const Catalog = () => {
+    const { t } = useTranslation();
     return (
     <MainContainerStyle>
-    <title>Verðskrá</title>
+    <title>{t.catalog.title}</title>
     <MainContainerContentStyle>
-    <h1>Verðskrá</h1>
-        <p>Allir tímar eru einkatímar og allt námsefni er innifalið.</p>
-        <p>Námskeið 12 vikur (12 * 30 mín)<br />
-        Verð: 60.000 kr.</p>
-        <p>Stakir tímar (30 mín)<br />
-        Verð: 6000 kr.</p>
-        <p>Stakir tímar (1 klst)<br />
-        Verð: 11.000kr.</p>
+    <h1>{t.catalog.heading}</h1>
+        <p>{t.catalog.all_private}</p>
+        <p>{t.catalog.course_12_weeks}<br />
+        {t.catalog.price_label}: {t.catalog.price_12_weeks}</p>
+        <p>{t.catalog.single_30_min}<br />
+        {t.catalog.price_label}: {t.catalog.price_30_min}</p>
+        <p>{t.catalog.single_60_min}<br />
+        {t.catalog.price_label}: {t.catalog.price_60_min}</p>
     </MainContainerContentStyle>
     </MainContainerStyle>)
 }

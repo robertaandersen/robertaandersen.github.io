@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavigationMenuExpandedStyle, NavigationContainerStyle, NavigationMenuStyle } from '../UI/Navigation/NavigationStyle';
+import { NavigationMenuExpandedStyle, NavigationContainerStyle, NavigationMenuStyle, LanguageToggleStyle } from '../UI/Navigation/NavigationStyle';
 import HamburgerStyle from '../UI/Navigation/HamburgerStyle';
 import { ReactComponent as Hamburger } from '../UI/Navigation/Hamburger.svg';
 import { MainContainerContentStyle } from '../UI/MainContainer/MainContainerStyle';
@@ -9,19 +9,24 @@ import Catalog from '../Catalog/Catalog';
 import About from '../About/About';
 import Chords from '../Chords/Chords';
 import Book from '../Book/Book';
+import { useTranslation } from '../i18n/LanguageContext';
 
-const pages = [
-  { key: 'Landing', title: 'Velkomin', component: <Landing /> },
-  { key: 'Book', title: 'Bóka Tíma', component: <Book /> },
-  { key: 'Courses', title: 'Uppbygging Námsins', component: <Courses /> },
-  { key: 'Catalog', title: 'Verð', component: <Catalog /> },
-  { key: 'About', title: 'Um Mig', component: <About /> },
-  { key: 'Chords', title: 'Gítargrip', component: <Chords /> },
-];
+const pageComponents: Record<string, JSX.Element> = {
+  Landing: <Landing />,
+  Book: <Book />,
+  Courses: <Courses />,
+  Catalog: <Catalog />,
+  About: <About />,
+  Chords: <Chords />,
+};
+
+const pageKeys = ['Landing', 'Book', 'Courses', 'Catalog', 'About', 'Chords'] as const;
+type NavKey = 'landing' | 'book' | 'courses' | 'catalog' | 'about' | 'chords';
 
 const Navigation = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const [activePage, setActivePage] = useState('Landing');
+  const { lang, setLang, t } = useTranslation();
 
   const NavigationStyle = isNavExpanded ? NavigationMenuExpandedStyle : NavigationMenuStyle;
 
@@ -33,16 +38,26 @@ const Navigation = () => {
         </HamburgerStyle>
         <NavigationStyle>
           <ul>
-            {pages.map(({ key, title }) => (
+            {pageKeys.map((key) => (
               <li key={key}>
-                <button onClick={() => setActivePage(key)}>{title}</button>
+                <button onClick={() => setActivePage(key)}>
+                  {t.nav[key.toLowerCase() as NavKey]}
+                </button>
               </li>
             ))}
           </ul>
         </NavigationStyle>
+        <LanguageToggleStyle>
+          <button
+            onClick={() => setLang(lang === 'is' ? 'en' : 'is')}
+            aria-label={lang === 'is' ? 'Switch to English' : 'Skipta yfir á íslensku'}
+          >
+            {lang === 'is' ? 'EN' : 'IS'}
+          </button>
+        </LanguageToggleStyle>
       </NavigationContainerStyle>
       <MainContainerContentStyle>
-        {pages.find(p => p.key === activePage)?.component}
+        {pageComponents[activePage]}
       </MainContainerContentStyle>
     </>
   );
