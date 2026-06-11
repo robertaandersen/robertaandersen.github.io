@@ -13,40 +13,40 @@ import { ChordContainer } from '../UI/Chords/ChordContainer';
 import { useTranslation } from '../i18n/LanguageContext';
 
 
-const ChordPageStyle = styled(MainContainerContentStyle)`
+const ChordGrid = styled.div`
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-`
+    gap: 0.5rem;
+    justify-content: center;
+`;
 
 const Chords = () => {
     const { t } = useTranslation();
     return (
-      <>
         <MainContainerContentStyle>
           <h1>{t.chords.heading}</h1>
+
           <h3>{t.chords.major_chords}</h3>
-          <ChordPageStyle>
-            <ChordContainer {...{ ChordDiagram: Emajor, chordName: "E" }} />
-            <ChordContainer {...{ ChordDiagram: Amajor, chordName: "A" }} />
-            <ChordContainer {...{ ChordDiagram: Dmajor, chordName: "D" }} />
-            <ChordContainer {...{ ChordDiagram: Gmajor, chordName: "G" }} />
-            <ChordContainer {...{ ChordDiagram: Cmajor, chordName: "C" }} />
-          </ChordPageStyle>
+          <ChordGrid>
+            <ChordContainer ChordDiagram={Emajor} chordName="E" />
+            <ChordContainer ChordDiagram={Amajor} chordName="A" />
+            <ChordContainer ChordDiagram={Dmajor} chordName="D" />
+            <ChordContainer ChordDiagram={Gmajor} chordName="G" />
+            <ChordContainer ChordDiagram={Cmajor} chordName="C" />
+          </ChordGrid>
 
           <h3>{t.chords.minor_chords}</h3>
-          <ChordPageStyle>
-            <ChordContainer {...{ ChordDiagram: Eminor, chordName: "Em" }} />
-            <ChordContainer {...{ ChordDiagram: Aminor, chordName: "Am" }} />
-          </ChordPageStyle>
+          <ChordGrid>
+            <ChordContainer ChordDiagram={Eminor} chordName="Em" />
+            <ChordContainer ChordDiagram={Aminor} chordName="Am" />
+          </ChordGrid>
 
           <h3>{t.chords.seventh_chords}</h3>
-          <ChordPageStyle>
-            <ChordContainer {...{ ChordDiagram: Emajor7, chordName: "E7" }} />
-            <ChordContainer {...{ ChordDiagram: Amajor7, chordName: "A7" }} />
-          </ChordPageStyle>
+          <ChordGrid>
+            <ChordContainer ChordDiagram={Emajor7} chordName="E7" />
+            <ChordContainer ChordDiagram={Amajor7} chordName="A7" />
+          </ChordGrid>
         </MainContainerContentStyle>
-      </>
     );
 }
 

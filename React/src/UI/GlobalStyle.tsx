@@ -28,23 +28,49 @@ export const GlobalStyle = createGlobalStyle`
         src: url(${fontUrl}) format('woff2');
     }
 
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
     body, html {
         margin: 0;
         font-family: 'Source Serif 4', serif;
         letter-spacing: 0.025rem;
         font-size: 1rem;
-        line-height: 1.5rem;
+        line-height: 1.6;
         font-weight: 400;
+        color: #1a1a1a;
+        -webkit-font-smoothing: antialiased;
     }
 
     h1, h2, h3, h4 {
-        line-height: 0.75;
-        font-weight: 400;
-        margin-top: 1.25rem;
+        line-height: 1.2;
+        font-weight: 500;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
     }
 
-    h1 { font-size: 3.5rem;}
-    h2 { font-size: 3.0rem;}
-    h3 { font-size: 2.5rem;}
-    h4 { font-size: 2.0rem;}
+    h1 { font-size: clamp(2rem, 5vw, 3rem); }
+    h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+    h3 { font-size: clamp(1.4rem, 3vw, 2rem); }
+    h4 { font-size: clamp(1.15rem, 2.5vw, 1.5rem); }
+
+    p {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    a {
+        color: #2563eb;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    hr {
+        border: none;
+        border-top: 1px solid #e5e5e5;
+        margin: 1.5rem 0;
+    }
 `

@@ -1,24 +1,34 @@
-
 import styled from "styled-components";
 import { ReactComponent as BaseGrid } from './OpenPosition/BaseGrid.svg';
 import { ReactComponent as BaseGridNoNut } from './BaseGridNoNut.svg';
 
 const ChordContainerStyle = styled.div`
   width: fit-content;
-  min-width: 150px;
-  @media (max-width: 480px) {
-    min-width: 120px;
+  min-width: 120px;
+  text-align: center;
+
+  h4 {
+    margin: 0.5rem 0 0.25rem;
+  }
+
+  hr {
+    margin: 0;
   }
 `;
 
-const ChordGridStyle = styled.div`
+const ChordStack = styled.div`
   position: relative;
-  height: 180px;
-`;
+  width: 120px;
+  height: 145px;
+  margin: 0 auto;
 
-const ChordDiagramStyle = styled(ChordGridStyle)`
-  position: relative;
-  top: -180px;
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const ChordContainer = ({
@@ -30,16 +40,12 @@ export const ChordContainer = ({
 }) => {
   return (
     <ChordContainerStyle>
-      <center>
-        <hr />
-        <h4>{chordName}</h4>
-        <ChordGridStyle>
-          <BaseGrid />
-        </ChordGridStyle>
-        <ChordDiagramStyle>
-          <ChordDiagram />
-        </ChordDiagramStyle>
-      </center>
+      <hr />
+      <h4>{chordName}</h4>
+      <ChordStack>
+        <BaseGrid />
+        <ChordDiagram />
+      </ChordStack>
     </ChordContainerStyle>
   );
 };
@@ -53,16 +59,12 @@ export const MovableChordContainer = ({
 }) => {
   return (
     <ChordContainerStyle>
-      <center>
-        <hr />
-        <h4>{chordName}</h4>
-        <ChordGridStyle>
-          <BaseGridNoNut />
-        </ChordGridStyle>
-        <ChordDiagramStyle>
-          <ChordDiagram />
-        </ChordDiagramStyle>
-      </center>
+      <hr />
+      <h4>{chordName}</h4>
+      <ChordStack>
+        <BaseGridNoNut />
+        <ChordDiagram />
+      </ChordStack>
     </ChordContainerStyle>
   );
 };

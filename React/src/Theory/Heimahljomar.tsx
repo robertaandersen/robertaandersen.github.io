@@ -14,21 +14,46 @@ import { ReactComponent as Min7b5ChordA } from "../UI/Chords/Min7b5ChordA.svg";
 const ChordTable = styled.table`
   border-collapse: collapse;
   margin: 1rem 0;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  width: 100%;
 
   th, td {
-    border: 1px solid #ccc;
-    padding: 6px 12px;
+    border: 1px solid #ddd;
+    padding: 6px 10px;
     text-align: center;
   }
   th {
     background: #f5f5f5;
+    font-weight: 500;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.8rem;
+    th, td {
+      padding: 5px 6px;
+    }
   }
 `;
 
-const ArpeggioRow = styled.div`
+const ChordRow = styled.div`
   display: flex;
   flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+`;
+
+const Formula = styled.pre`
+  background: #f5f5f5;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  overflow-x: auto;
+  font-size: 0.9rem;
+  margin: 0.75rem 0;
+
+  @media (max-width: 480px) {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.75rem;
+  }
 `;
 
 const Heimahljomar = () => {
@@ -42,10 +67,9 @@ const Heimahljomar = () => {
 
             <h3>{h.building_heading}</h3>
             <p>{h.building_example}</p>
-            <pre>C  D  E  F  G  A  B</pre>
+            <Formula>C  D  E  F  G  A  B</Formula>
             <p>{h.pick_every_other}</p>
-            <pre>{`C → E → G → B = Cmaj7 (I)`}</pre>
-            <pre>{`D → F → A → C = Dm7  (II)`}</pre>
+            <Formula>{`C → E → G → B = Cmaj7 (I)\nD → F → A → C = Dm7  (II)`}</Formula>
 
             <h3>{h.pattern_heading}</h3>
             <p>{h.chord_types_intro}</p>
@@ -65,7 +89,7 @@ const Heimahljomar = () => {
             </ChordTable>
 
             <h3>{h.formula_heading}</h3>
-            <pre>Imaj7 – IIm7 – IIIm7 – IVmaj7 – V7 – VIm7 – VIIm7♭5</pre>
+            <Formula>Imaj7 – IIm7 – IIIm7 – IVmaj7 – V7 – VIm7 – VIIm7♭5</Formula>
 
             <h3>{h.examples_heading}</h3>
             <h4>C-dúr</h4>
@@ -90,20 +114,20 @@ const Heimahljomar = () => {
 
             <h3>{h.chords_heading}</h3>
             <p>{h.chords_e_root}</p>
-            <ArpeggioRow>
+            <ChordRow>
                 <MovableChordContainer ChordDiagram={Maj7ChordE} chordName="Maj7" />
                 <MovableChordContainer ChordDiagram={Dom7ChordE} chordName="7" />
                 <MovableChordContainer ChordDiagram={Min7ChordE} chordName="m7" />
                 <MovableChordContainer ChordDiagram={Min7b5ChordE} chordName="m7♭5" />
-            </ArpeggioRow>
+            </ChordRow>
 
             <p>{h.chords_a_root}</p>
-            <ArpeggioRow>
+            <ChordRow>
                 <MovableChordContainer ChordDiagram={Maj7ChordA} chordName="Maj7" />
                 <MovableChordContainer ChordDiagram={Dom7ChordA} chordName="7" />
                 <MovableChordContainer ChordDiagram={Min7ChordA} chordName="m7" />
                 <MovableChordContainer ChordDiagram={Min7b5ChordA} chordName="m7♭5" />
-            </ArpeggioRow>
+            </ChordRow>
         </MainContainerContentStyle>
     );
 }

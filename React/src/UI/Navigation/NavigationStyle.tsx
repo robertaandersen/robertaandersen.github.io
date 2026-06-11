@@ -1,15 +1,20 @@
 import styled from "styled-components";
 
-export const NavigationContainerStyle = styled.div `
+export const NavigationContainerStyle = styled.nav`
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: #fff;
-    color: black;
-    position: relative;
-`
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0 1rem;
+    min-height: 48px;
+`;
+
 export const LanguageToggleStyle = styled.div`
     position: absolute;
-    top: 8px;
     right: 12px;
 
     button {
@@ -24,67 +29,78 @@ export const LanguageToggleStyle = styled.div`
     }
 
     button:hover {
-        background-color: #eee;
+        background-color: #f5f5f5;
     }
-`
-export  const NavigationMenuStyle = styled.div `
-    align-self: center;
+`;
 
+export const NavigationMenuStyle = styled.div`
     ul {
         display: flex;
-        padding: 5px;
+        padding: 0;
+        margin: 0;
+        gap: 0.25rem;
     }
+
     li {
         list-style-type: none;
-        margin: 0 1rem;
     }
 
     li button {
         background: none;
         border: none;
+        border-bottom: 2px solid transparent;
         cursor: pointer;
         font: inherit;
-        text-decoration: none;
-        display: block;
-        color: black;
-        width: 100%;
-        padding: 0;
+        font-size: 0.95rem;
+        color: #555;
+        padding: 12px 14px;
+        transition: color 0.15s, border-color 0.15s;
     }
 
     li button:hover {
-        text-decoration-line: underline;
+        color: #1a1a1a;
+    }
+
+    li button.active {
+        color: #1a1a1a;
+        font-weight: 500;
+        border-bottom-color: #1a1a1a;
     }
 
     @media screen and (max-width: 768px) {
-
         ul {
-            padding: 20px;
-            width: 100%;
-            background-color: white;
             display: none;
-        }
-
-        li {
-            text-align: center;
-            margin: 0;
-            width: 100;
+            flex-direction: column;
+            position: absolute;
+            top: 48px;
+            left: 0;
+            right: 0;
+            background: #fff;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 0.5rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
         li button {
-            color: black;
             width: 100%;
-            padding: 1.5rem 0;
+            text-align: center;
+            padding: 14px 1rem;
+            border-bottom: none;
         }
 
-        li:hover {
-            background-color: #eee;
+        li button.active {
+            background: #f5f5f5;
+            border-bottom: none;
+        }
+
+        li button:hover {
+            background: #f5f5f5;
         }
     }
-`
+`;
 
-export const NavigationMenuExpandedStyle= styled(NavigationMenuStyle)`
+export const NavigationMenuExpandedStyle = styled(NavigationMenuStyle)`
     ul {
-        display: block;
+        display: flex;
     }
-`
-
+`;

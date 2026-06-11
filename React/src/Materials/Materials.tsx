@@ -8,31 +8,33 @@ import { useTranslation } from "../i18n/LanguageContext";
 const TabBar = styled.div`
   display: flex;
   gap: 0;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid #e5e5e5;
   margin-bottom: 1rem;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 1rem;
 
   @media (max-width: 480px) {
-    margin-left: 15px;
-    margin-right: 15px;
+    padding: 0 0.5rem;
   }
 `;
 
 const Tab = styled.button<{ $active: boolean }>`
   background: none;
   border: none;
-  border-bottom: 2px solid ${({ $active }) => ($active ? "#333" : "transparent")};
+  border-bottom: 2px solid ${({ $active }) => ($active ? "#1a1a1a" : "transparent")};
   margin-bottom: -2px;
-  padding: 8px 16px;
+  padding: 10px 20px;
   cursor: pointer;
   font: inherit;
+  font-size: 1rem;
   font-weight: ${({ $active }) => ($active ? "500" : "400")};
-  color: ${({ $active }) => ($active ? "#000" : "#666")};
+  color: ${({ $active }) => ($active ? "#1a1a1a" : "#666")};
+  transition: color 0.15s, border-color 0.15s;
 
   &:hover {
-    color: #000;
+    color: #1a1a1a;
   }
 `;
 

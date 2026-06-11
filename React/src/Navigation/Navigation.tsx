@@ -2,7 +2,6 @@ import { useState } from "react";
 import { NavigationMenuExpandedStyle, NavigationContainerStyle, NavigationMenuStyle, LanguageToggleStyle } from '../UI/Navigation/NavigationStyle';
 import HamburgerStyle from '../UI/Navigation/HamburgerStyle';
 import { ReactComponent as Hamburger } from '../UI/Navigation/Hamburger.svg';
-import { MainContainerContentStyle } from '../UI/MainContainer/MainContainerStyle';
 import Landing from '../Landing/Landing';
 import Courses from '../Courses/Courses';
 import Catalog from '../Catalog/Catalog';
@@ -40,7 +39,10 @@ const Navigation = () => {
           <ul>
             {pageKeys.map((key) => (
               <li key={key}>
-                <button onClick={() => setActivePage(key)}>
+                <button
+                  className={activePage === key ? 'active' : ''}
+                  onClick={() => { setActivePage(key); setIsNavExpanded(false); }}
+                >
                   {t.nav[key.toLowerCase() as NavKey]}
                 </button>
               </li>
@@ -56,9 +58,7 @@ const Navigation = () => {
           </button>
         </LanguageToggleStyle>
       </NavigationContainerStyle>
-      <MainContainerContentStyle>
-        {pageComponents[activePage]}
-      </MainContainerContentStyle>
+      {pageComponents[activePage]}
     </>
   );
 };
