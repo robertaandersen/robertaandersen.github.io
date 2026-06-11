@@ -97,7 +97,11 @@
       "examples_heading": "Examples",
       "chords_heading": "Chord Shapes",
       "chords_e_root": "Chords with root on 6th string (E shape):",
-      "chords_a_root": "Chords with root on 5th string (A shape):"
+      "chords_a_root": "Chords with root on 5th string (A shape):",
+      "arpeggios_heading": "Arpeggios",
+      "arpeggios_intro": "Arpeggios are the same notes as in the chords but played one at a time. Here are patterns for all 4 diatonic chord types:",
+      "arpeggios_e_root": "Arpeggios with root on 6th string (E shape):",
+      "arpeggios_a_root": "Arpeggios with root on 5th string (A shape):"
     }
   }
 }

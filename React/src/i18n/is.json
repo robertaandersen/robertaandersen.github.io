@@ -97,7 +97,11 @@
       "examples_heading": "Dæmi",
       "chords_heading": "Gripmynstur",
       "chords_e_root": "Grip með rót á 6. streng (E-mynstur):",
-      "chords_a_root": "Grip með rót á 5. streng (A-mynstur):"
+      "chords_a_root": "Grip með rót á 5. streng (A-mynstur):",
+      "arpeggios_heading": "Brotnir hljómar",
+      "arpeggios_intro": "Brotnir hljómar (arpeggios) eru sömu nótur og í gripunum en spilaðar ein í einu. Hér eru mynstur fyrir allar 4 gerðir heimahljóma:",
+      "arpeggios_e_root": "Brotnir hljómar með rót á 6. streng (E-mynstur):",
+      "arpeggios_a_root": "Brotnir hljómar með rót á 5. streng (A-mynstur):"
     }
   }
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 83 116" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dom7 arpeggio - E shape (5 frets): 1@E/f2, 3@A/f1, 5@A/f4, ♭7@D/f2, 1@D/f4, 3@G/f3, 5@B/f2, ♭7@B/f5, 1@e/f2 -->
+  <circle cx="10.0" cy="40" r="5" stroke="black" stroke-width="1" fill="rgb(256,256,256,125)" />
+  <text x="10.0" y="42" font-size="0.35em" text-anchor="middle">1</text>
+  <circle cx="22.5" cy="20" r="5" stroke="black" stroke-width="1" fill="rgb(256,256,256,125)" />
+  <text x="22.5" y="22" font-size="0.35em" text-anchor="middle">3</text>
+  <circle cx="22.5" cy="80" r="5" stroke="black" stroke-width="1" fill="rgb(256,256,256,125)" />
+  <text x="22.5" y="82" font-size="0.35em" text-anchor="middle">5</text>
+  <circle cx="35.0" cy="40" r="5" stroke="black" stroke-width="1" fill="rgb(256,256,256,125)" />
+  <text x="35.0" y="42" font-size="0.35em" text-anchor="middle">♭7</text>
+  <circle cx="35.0" cy="80" r="5" stroke="black" stroke-width="1" fill="rgb(256,256,256,125)" />
+  <text x="35.0" y="82" font-size="0.35em" text-anchor="middle">1</text>
+  <circle cx="47.5" cy="60" r="5" stroke="black" stroke-width="1" fill="rgb(256,256,256,125)" />
+  <text x="47.5" y="62" font-size="0.35em" text-anchor="middle">3</text>
+  <circle cx="60.0" cy="40" r="5" stroke="black" stroke-width="1" fill="rgb(256,256,256,125)" />
+  <text x="60.0" y="42" font-size="0.35em" text-anchor="middle">5</text>
+  <circle cx="60.0" cy="98" r="5" stroke="black" stroke-width="1" fill="rgb(256,256,256,125)" />
+  <text x="60.0" y="100" font-size="0.35em" text-anchor="middle">♭7</text>
+  <circle cx="72.5" cy="40" r="5" stroke="black" stroke-width="1" fill="rgb(256,256,256,125)" />
+  <text x="72.5" y="42" font-size="0.35em" text-anchor="middle">1</text>
+</svg>

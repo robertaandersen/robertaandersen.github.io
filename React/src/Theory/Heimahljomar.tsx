@@ -10,6 +10,14 @@ import { ReactComponent as Maj7ChordA } from "../UI/Chords/Maj7ChordA.svg";
 import { ReactComponent as Dom7ChordA } from "../UI/Chords/Dom7ChordA.svg";
 import { ReactComponent as Min7ChordA } from "../UI/Chords/Min7ChordA.svg";
 import { ReactComponent as Min7b5ChordA } from "../UI/Chords/Min7b5ChordA.svg";
+import { ReactComponent as Maj7ArpE } from "../UI/Chords/Arpeggios/Maj7ArpE.svg";
+import { ReactComponent as Dom7ArpE } from "../UI/Chords/Arpeggios/Dom7ArpE.svg";
+import { ReactComponent as Min7ArpE } from "../UI/Chords/Arpeggios/Min7ArpE.svg";
+import { ReactComponent as Min7b5ArpE } from "../UI/Chords/Arpeggios/Min7b5ArpE.svg";
+import { ReactComponent as Maj7ArpA } from "../UI/Chords/Arpeggios/Maj7ArpA.svg";
+import { ReactComponent as Dom7ArpA } from "../UI/Chords/Arpeggios/Dom7ArpA.svg";
+import { ReactComponent as Min7ArpA } from "../UI/Chords/Arpeggios/Min7ArpA.svg";
+import { ReactComponent as Min7b5ArpA } from "../UI/Chords/Arpeggios/Min7b5ArpA.svg";
 
 const ChordTable = styled.table`
   border-collapse: collapse;
@@ -127,6 +135,25 @@ const Heimahljomar = () => {
                 <MovableChordContainer ChordDiagram={Dom7ChordA} chordName="7" />
                 <MovableChordContainer ChordDiagram={Min7ChordA} chordName="m7" />
                 <MovableChordContainer ChordDiagram={Min7b5ChordA} chordName="m7♭5" />
+            </ChordRow>
+
+            <h3>{h.arpeggios_heading}</h3>
+            <p>{h.arpeggios_intro}</p>
+
+            <p>{h.arpeggios_e_root}</p>
+            <ChordRow>
+                <MovableChordContainer ChordDiagram={Maj7ArpE} chordName="Maj7" frets5 />
+                <MovableChordContainer ChordDiagram={Dom7ArpE} chordName="7" frets5 />
+                <MovableChordContainer ChordDiagram={Min7ArpE} chordName="m7" frets5 />
+                <MovableChordContainer ChordDiagram={Min7b5ArpE} chordName="m7♭5" frets5 />
+            </ChordRow>
+
+            <p>{h.arpeggios_a_root}</p>
+            <ChordRow>
+                <MovableChordContainer ChordDiagram={Maj7ArpA} chordName="Maj7" frets5 />
+                <MovableChordContainer ChordDiagram={Dom7ArpA} chordName="7" frets5 />
+                <MovableChordContainer ChordDiagram={Min7ArpA} chordName="m7" frets5 />
+                <MovableChordContainer ChordDiagram={Min7b5ArpA} chordName="m7♭5" frets5 />
             </ChordRow>
         </MainContainerContentStyle>
     );

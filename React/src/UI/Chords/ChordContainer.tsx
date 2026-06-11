@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { ReactComponent as BaseGrid } from './OpenPosition/BaseGrid.svg';
 import { ReactComponent as BaseGridNoNut } from './BaseGridNoNut.svg';
+import { ReactComponent as BaseGridNoNut5 } from './BaseGridNoNut5.svg';
 
 const ChordContainerStyle = styled.div`
   width: fit-content;
@@ -16,10 +17,10 @@ const ChordContainerStyle = styled.div`
   }
 `;
 
-const ChordStack = styled.div`
+const ChordStack = styled.div<{ $tall?: boolean }>`
   position: relative;
   width: 120px;
-  height: 145px;
+  height: ${({ $tall }) => ($tall ? '175px' : '145px')};
   margin: 0 auto;
 
   svg {
@@ -53,16 +54,18 @@ export const ChordContainer = ({
 export const MovableChordContainer = ({
   ChordDiagram,
   chordName,
+  frets5,
 }: {
   ChordDiagram: React.FC<React.SVGProps<SVGSVGElement>>;
   chordName: string;
+  frets5?: boolean;
 }) => {
   return (
     <ChordContainerStyle>
       <hr />
       <h4>{chordName}</h4>
-      <ChordStack>
-        <BaseGridNoNut />
+      <ChordStack $tall={frets5}>
+        {frets5 ? <BaseGridNoNut5 /> : <BaseGridNoNut />}
         <ChordDiagram />
       </ChordStack>
     </ChordContainerStyle>

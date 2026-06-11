@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 83 116" xmlns="http://www.w3.org/2000/svg">
+  <!-- Maj7 arpeggio - A shape: 1@A/f2, 3@D/f1, 5@D/f4, 7@G/f3, 1@G/f4, 3@B/f4, 5@e/f2 -->
+  <circle cx="22.5" cy="40" r="5" stroke="black" stroke-width="1" fill="rgb(256,256,256,125)" />
+  <text x="22.5" y="42" font-size="0.35em" text-anchor="middle">1</text>
+  <circle cx="35.0" cy="20" r="5" stroke="black" stroke-width="1" fill="rgb(256,256,256,125)" />
+  <text x="35.0" y="22" font-size="0.35em" text-anchor="middle">3</text>
+  <circle cx="35.0" cy="80" r="5" stroke="black" stroke-width="1" fill="rgb(256,256,256,125)" />
+  <text x="35.0" y="82" font-size="0.35em" text-anchor="middle">5</text>
+  <circle cx="47.5" cy="60" r="5" stroke="black" stroke-width="1" fill="rgb(256,256,256,125)" />
+  <text x="47.5" y="62" font-size="0.35em" text-anchor="middle">7</text>
+  <circle cx="47.5" cy="80" r="5" stroke="black" stroke-width="1" fill="rgb(256,256,256,125)" />
+  <text x="47.5" y="82" font-size="0.35em" text-anchor="middle">1</text>
+  <circle cx="60.0" cy="80" r="5" stroke="black" stroke-width="1" fill="rgb(256,256,256,125)" />
+  <text x="60.0" y="82" font-size="0.35em" text-anchor="middle">3</text>
+  <circle cx="72.5" cy="40" r="5" stroke="black" stroke-width="1" fill="rgb(256,256,256,125)" />
+  <text x="72.5" y="42" font-size="0.35em" text-anchor="middle">5</text>
+</svg>
