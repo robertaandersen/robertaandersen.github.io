@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { MainContainerContentStyle, MainContainerStyle } from "../UI/MainContainer/MainContainerStyle";
 import { useTranslation } from "../i18n/LanguageContext";
+import useDocumentTitle from "../hooks/useDocumentTitle";
 
 const ContactCard = styled.div`
     background: #f9f9f9;
@@ -19,9 +20,9 @@ const ContactCard = styled.div`
 
 const Landing = () => {
     const { t } = useTranslation();
+    useDocumentTitle(t.landing.title);
     return (
     <MainContainerStyle>
-        <title>{t.landing.title}</title>
         <MainContainerContentStyle>
             <h1>{t.landing.heading}</h1>
             <p>{t.landing.intro}</p>

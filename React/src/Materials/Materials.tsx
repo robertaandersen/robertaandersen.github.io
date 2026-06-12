@@ -4,6 +4,7 @@ import { MainContainerStyle } from "../UI/MainContainer/MainContainerStyle";
 import Chords from "../Chords/Chords";
 import Heimahljomar from "../Theory/Heimahljomar";
 import { useTranslation } from "../i18n/LanguageContext";
+import useDocumentTitle from "../hooks/useDocumentTitle";
 
 const TabBar = styled.div`
   display: flex;
@@ -43,10 +44,10 @@ type MaterialsTab = "chords" | "heimahljomar";
 const Materials = () => {
   const [tab, setTab] = useState<MaterialsTab>("chords");
   const { t } = useTranslation();
+  useDocumentTitle(t.materials.title);
 
   return (
     <MainContainerStyle>
-      <title>{t.materials.title}</title>
       <TabBar>
         <Tab $active={tab === "chords"} onClick={() => setTab("chords")}>
           {t.materials.tabs.chords}

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Routes, Route, NavLink, Navigate } from "react-router-dom";
 import { NavigationMenuExpandedStyle, NavigationContainerStyle, NavigationMenuStyle, LanguageToggleStyle } from '../UI/Navigation/NavigationStyle';
 import HamburgerStyle from '../UI/Navigation/HamburgerStyle';
 import { ReactComponent as Hamburger } from '../UI/Navigation/Hamburger.svg';
@@ -10,21 +11,19 @@ import Materials from '../Materials/Materials';
 import Book from '../Book/Book';
 import { useTranslation } from '../i18n/LanguageContext';
 
-const pageComponents: Record<string, JSX.Element> = {
-  Landing: <Landing />,
-  Book: <Book />,
-  Courses: <Courses />,
-  Catalog: <Catalog />,
-  About: <About />,
-  Materials: <Materials />,
-};
+const navItems = [
+  { path: '/', key: 'landing' },
+  { path: '/boka', key: 'book' },
+  { path: '/namskeid', key: 'courses' },
+  { path: '/verd', key: 'catalog' },
+  { path: '/um', key: 'about' },
+  { path: '/namsefni', key: 'materials' },
+] as const;
 
-const pageKeys = ['Landing', 'Book', 'Courses', 'Catalog', 'About', 'Materials'] as const;
-type NavKey = 'landing' | 'book' | 'courses' | 'catalog' | 'about' | 'materials';
+type NavKey = typeof navItems[number]['key'];
 
 const Navigation = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
-  const [activePage, setActivePage] = useState('Landing');
   const { lang, setLang, t } = useTranslation();
 
   const NavigationStyle = isNavExpanded ? NavigationMenuExpandedStyle : NavigationMenuStyle;
@@ -32,19 +31,23 @@ const Navigation = () => {
   return (
     <>
       <NavigationContainerStyle>
-        <HamburgerStyle onClick={() => setIsNavExpanded(!isNavExpanded)}>
+        <HamburgerStyle
+          onClick={() => setIsNavExpanded(!isNavExpanded)}
+          aria-label="Menu"
+        >
           <Hamburger fill='rgba(0,0,0,0)' stroke='black' />
         </HamburgerStyle>
         <NavigationStyle>
           <ul>
-            {pageKeys.map((key) => (
+            {navItems.map(({ path, key }) => (
               <li key={key}>
-                <button
-                  className={activePage === key ? 'active' : ''}
-                  onClick={() => { setActivePage(key); setIsNavExpanded(false); }}
+                <NavLink
+                  to={path}
+                  end={path === '/'}
+                  onClick={() => setIsNavExpanded(false)}
                 >
-                  {t.nav[key.toLowerCase() as NavKey]}
-                </button>
+                  {t.nav[key as NavKey]}
+                </NavLink>
               </li>
             ))}
           </ul>
@@ -58,7 +61,15 @@ const Navigation = () => {
           </button>
         </LanguageToggleStyle>
       </NavigationContainerStyle>
-      {pageComponents[activePage]}
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/boka" element={<Book />} />
+        <Route path="/namskeid" element={<Courses />} />
+        <Route path="/verd" element={<Catalog />} />
+        <Route path="/um" element={<About />} />
+        <Route path="/namsefni" element={<Materials />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
     </>
   );
 };

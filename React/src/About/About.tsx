@@ -1,12 +1,13 @@
 import { ImageParagraph, MainContainerContentStyle, MainContainerStyle } from '../UI/MainContainer/MainContainerStyle';
 import portrait from '../images/roberta.webp'
 import { useTranslation } from '../i18n/LanguageContext';
+import useDocumentTitle from '../hooks/useDocumentTitle';
 
 const About = () => {
     const { t } = useTranslation();
+    useDocumentTitle(t.about.title);
     return (
     <MainContainerStyle>
-        <title>{t.about.title}</title>
         <MainContainerContentStyle>
         <ImageParagraph>
         <h1>{t.about.heading}</h1>

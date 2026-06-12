@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { MainContainerContentStyle, MainContainerStyle } from "../UI/MainContainer/MainContainerStyle";
 import { useTranslation } from "../i18n/LanguageContext";
+import useDocumentTitle from "../hooks/useDocumentTitle";
 
 const PriceCard = styled.div`
     background: #fafafa;
@@ -32,9 +33,9 @@ const PriceValue = styled.span`
 
 const Catalog = () => {
     const { t } = useTranslation();
+    useDocumentTitle(t.catalog.title);
     return (
     <MainContainerStyle>
-    <title>{t.catalog.title}</title>
     <MainContainerContentStyle>
         <h1>{t.catalog.heading}</h1>
         <p>{t.catalog.all_private}</p>

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { MainContainerContentStyle, MainContainerStyle } from "../UI/MainContainer/MainContainerStyle";
 import { useTranslation } from "../i18n/LanguageContext";
+import useDocumentTitle from "../hooks/useDocumentTitle";
 
 const CourseCard = styled.section`
     background: #fafafa;
@@ -19,9 +20,9 @@ const CourseCard = styled.section`
 
 const Courses = () => {
     const { t } = useTranslation();
+    useDocumentTitle(t.courses.title);
     return (
         <MainContainerStyle>
-        <title>{t.courses.title}</title>
         <MainContainerContentStyle>
             <h1>{t.courses.heading}</h1>
             <p>{t.courses.intro}</p>

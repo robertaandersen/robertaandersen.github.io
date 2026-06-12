@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { MainContainerContentStyle, MainContainerStyle } from "../UI/MainContainer/MainContainerStyle";
 import { useTranslation } from "../i18n/LanguageContext";
+import useDocumentTitle from "../hooks/useDocumentTitle";
 
 const ContactInfo = styled.div`
     background: #fafafa;
@@ -19,9 +20,9 @@ const ContactInfo = styled.div`
 
 const Book = () => {
     const { t } = useTranslation();
+    useDocumentTitle(t.book.title);
     return (
     <MainContainerStyle>
-        <title>{t.book.title}</title>
 		<MainContainerContentStyle>
 			<h1>{t.book.heading}</h1>
 			<p>{t.book.description}</p>

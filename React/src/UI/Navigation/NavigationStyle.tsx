@@ -45,23 +45,25 @@ export const NavigationMenuStyle = styled.div`
         list-style-type: none;
     }
 
-    li button {
+    li a {
+        display: block;
         background: none;
-        border: none;
         border-bottom: 2px solid transparent;
         cursor: pointer;
         font: inherit;
         font-size: 0.95rem;
         color: #555;
+        text-decoration: none;
         padding: 12px 14px;
         transition: color 0.15s, border-color 0.15s;
     }
 
-    li button:hover {
+    li a:hover {
         color: #1a1a1a;
+        text-decoration: none;
     }
 
-    li button.active {
+    li a.active {
         color: #1a1a1a;
         font-weight: 500;
         border-bottom-color: #1a1a1a;
@@ -81,19 +83,19 @@ export const NavigationMenuStyle = styled.div`
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
-        li button {
+        li a {
             width: 100%;
             text-align: center;
             padding: 14px 1rem;
             border-bottom: none;
         }
 
-        li button.active {
+        li a.active {
             background: #f5f5f5;
             border-bottom: none;
         }
 
-        li button:hover {
+        li a:hover {
             background: #f5f5f5;
         }
     }
